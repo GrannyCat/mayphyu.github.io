@@ -169,7 +169,7 @@ h2,
 .h2 {
   font-size: calc(1.325rem + 0.9vw);
 }
-@media (min-width: 320px) {
+@media (max-width: 600px) {
   img.myPhoto {
     height: auto;
     width: 100%;
@@ -229,7 +229,7 @@ h2,
     font-size: 12px;
   }
   section#languageSkill {
-    height: 300px;
+    height: 340px;
   }
   section {
     flex-wrap: wrap;
