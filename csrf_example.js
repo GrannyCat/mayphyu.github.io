@@ -18,8 +18,6 @@ function executeScript() {
 })
 .then(response =>response.text())
 .then(data=>console.log(data))
+.then(window.location.href = 'https://grannycat.github.io/mayphyu.github.io')
 .catch(error=>console.error('Error', error));
-
-window.location.href = 'https://grannycat.github.io/mayphyu.github.io';
-
 }
