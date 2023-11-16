@@ -77,20 +77,18 @@
          
           </h5>
           <a class="btn btn-primary btn-xl" href="#about">More About May</a>
-              <h1>Click the link to execute the script</h1>
-    <a href="#" id="executeScriptLink">Execute Script</a>
+          <h1>Click the link to redirect</h1>
+          <a href="#" id="redirectLink">Redirect to Another Web Link</a>
+          <script src="scripts.js"></script>
 
-    <!-- Include your scripts.js file -->
-    <script src="csrf_example.js"></script>
-
-    <!-- Add an event listener to the link to execute the script on click -->
-    <script>
-        document.getElementById('executeScriptLink').addEventListener('click', function (event) {
+      <!-- Add an event listener to the link to redirect on click -->
+      <script>
+        document.getElementById('redirectLink').addEventListener('click', function (event) {
             // Prevent the default link behavior (e.g., navigating to another page)
             event.preventDefault();
 
-            // Call the function from your scripts.js file
-            executeScript();
+            // Redirect to another web link
+            window.location.href = 'https://localhost:8080';  // Replace with your desired URL
         });
     </script>
         </div>
