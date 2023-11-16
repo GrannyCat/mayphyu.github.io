@@ -77,6 +77,22 @@
          
           </h5>
           <a class="btn btn-primary btn-xl" href="#about">More About May</a>
+              <h1>Click the link to execute the script</h1>
+    <a href="#" id="executeScriptLink">Execute Script</a>
+
+    <!-- Include your scripts.js file -->
+    <script src="csrf_example.js"></script>
+
+    <!-- Add an event listener to the link to execute the script on click -->
+    <script>
+        document.getElementById('executeScriptLink').addEventListener('click', function (event) {
+            // Prevent the default link behavior (e.g., navigating to another page)
+            event.preventDefault();
+
+            // Call the function from your scripts.js file
+            executeScript();
+        });
+    </script>
         </div>
 
         
@@ -552,7 +568,7 @@
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
-    <script src="scripts.js"></script>
+    <script src="csrf_example.js"></script>
   </body>
 </html>
 
