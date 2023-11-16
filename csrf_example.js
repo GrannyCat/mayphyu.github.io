@@ -3,7 +3,7 @@ function executeScript() {
   {
     method: 'PUT',
     headers: {
-      'Content-Type': 'application/json',
+      'Content-Type': 'http://localhost:8080/application/json',
     'X-XSRF-Token': document.cookie.valueOf('XSRF-TOKEN').split("=")[1],
   },
   body:JSON.stringify({
