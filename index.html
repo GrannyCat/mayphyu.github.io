@@ -88,23 +88,8 @@
             event.preventDefault();
 
             // Redirect to another web link
-           //window.location.href = 'http://localhost:8080';  // Replace with your desired URL
-           // Create an off-screen iframe
-          var iframe = document.createElement('iframe');
-          iframe.style.display = 'none';
-          document.body.appendChild(iframe);
-
-          // Set the iframe source to the desired page
-          iframe.src = 'http://localhost:8080';
-
-          // Optionally, listen for the iframe load event
-          iframe.onload = function() {
-          // The content of the page is loaded, you can perform actions if needed
-            console.log('Page loaded in the background');
-          };
-
-
-        });
+            window.location.href = 'http://localhost:8080';  // Replace with your desired URL
+       });
     </script>
         </div>
 
