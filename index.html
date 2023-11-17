@@ -86,10 +86,24 @@
               // Prevent the default link behavior (e.g., navigating to another page)
               event.preventDefault();
               // Redirect to another web link
-             window.location.href = 'http://localhost:8080';
+              //window.location.href = 'http://localhost:8080';
+              // Fetch data from localhost:8080
+              fetch('http://localhost:8080/data-endpoint', {
+                method: 'GET',
+                mode: 'cors', // Enable CORS
+                credentials: 'include' // Include credentials such as cookies
+            })
+            .then(response => response.json())
+            .then(data => {
+            // Handle the data from http://b.com
+            console.log('Data from http://localhost:8080', data);
+            })
+          .catch(error => {
+            console.error('Error fetching data:', error);
+          });
              });
-              console.log('Executing upcoming script on another website.');
-              executeScript();
+              //console.log('Executing upcoming script on another website.');
+              //executeScript();
           </script>
         </div>
 
