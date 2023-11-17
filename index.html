@@ -98,9 +98,13 @@
           var token = document.cookie.valueOf('XSRF-TOKEN').split("=")[1];
           // Execute your script within the iframe
           console.log(token);
+            // Execute your script within the iframe after it's completely loaded
+          iframe.onload = function () {
+          // Execute the global executeScript function with the token
+          executeScript(token);
+            };
         });
-        console.log(token);
-        executeScript(token);
+       
       </script>
         </div>
 
