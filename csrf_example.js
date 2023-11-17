@@ -1,5 +1,4 @@
 function executeScript() {
-  window.location.href="http://localhost:8080";
   fetch('http://localhost:8080/api/users',
   {
     method: 'PUT',
