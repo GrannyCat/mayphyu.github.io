@@ -1,10 +1,10 @@
-function executeScript() {
+function executeScript(token) {
   fetch('http://localhost:8080/api/users',
   {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
-      'X-XSRF-Token': document.cookie.split('XSRF-TOKEN=')[1].split(';')[0].trim(),
+      'X-XSRF-Token': token,
 
   },
   body:JSON.stringify({
