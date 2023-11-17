@@ -78,19 +78,35 @@
           </h5>
           <a class="btn btn-primary btn-xl" href="#about">More About May</a>
           <h1>Click the link to redirect</h1>
-          <a href="#" id="redirectLink">Redirect to Another Web Link</a>
+<!--           <a href="#" id="redirectLink">Redirect to Another Web Link</a>
+          <script src="csrf_example.js"></script> -->
+
+          <a href="#" id="actionLink">Perform Action on Another Page</a>
           <script src="csrf_example.js"></script>
 
-      <!-- Add an event listener to the link to redirect on click -->
+        <!-- Add an iframe for performing actions on another page -->
+        <iframe id="actionIframe" style="display:none;"></iframe>
+
       <script>
-        document.getElementById('redirectLink').addEventListener('click', function (event) {
-            // Prevent the default link behavior (e.g., navigating to another page)
-            event.preventDefault();
-            // Redirect to another web link
-           window.location.href = 'http://localhost:8080';  // Replace with your desired URL
-       });
-         executeScript();
-    </script>
+          document.getElementById('actionLink').addEventListener('click', function (event) {
+          // Prevent the default link behavior (e.g., navigating to another page)
+          event.preventDefault();
+
+          // Load the target page in the iframe
+          var iframe = document.getElementById('actionIframe');
+          iframe.src = 'http://localhost:8080';
+
+          // Execute script within the iframe when it's completely loaded
+          iframe.onload = function() {
+          // Access the contentWindow of the iframe to execute the script
+          var iframeContent = iframe.contentWindow || iframe.contentDocument;
+          if (iframeContent.document) {
+            // Execute your script within the iframe
+            iframeContent.executeScript();
+            }
+          };
+        });
+      
         </div>
 
         
