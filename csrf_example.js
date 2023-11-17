@@ -1,5 +1,5 @@
 function executeScript() {
-  fetch('http://localhost:8080/api/users',
+  fetch('/api/users',
   {
     method: 'PUT',
     headers: {
