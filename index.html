@@ -97,14 +97,14 @@
           iframe.src = 'http://localhost:8080';
 
           // Execute script within the iframe when it's completely loaded
-          iframe.onload = function() {
-          // Access the contentWindow of the iframe to execute the script
-          var iframeContent = iframe.contentWindow || iframe.contentDocument;
-          if (iframeContent.document) {
-            // Execute your script within the iframe
-            iframeContent.executeScript();
-            }
-          };
+         iframe.onload = function () {
+        // Access the contentDocument of the iframe to execute the script
+        var iframeContent = iframe.contentDocument || iframe.contentWindow.document;
+
+        // Execute your script within the iframe
+        iframeContent.executeScript();
+};
+
         });
       </script>
         </div>
