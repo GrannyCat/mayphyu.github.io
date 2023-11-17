@@ -89,10 +89,15 @@
            window.location.href = 'http://localhost:8080';
            
            });
-          window.onload = function() {
-            // Call executeScript only after the page has fully loaded
-            executeScript();
-          };
+            if (window.location.href == 'http://localhost:8080') {
+            // Execute your upcoming script
+              console.log('Executing upcoming script on another website.');
+              executeScript();
+          // Add your script logic here
+        } else {
+          console.log('Not on the specified website, skipping script execution.');
+        }
+
 
     </script>
         </div>
