@@ -78,11 +78,18 @@
           </h5>
           <a class="btn btn-primary btn-xl" href="#about">More About May</a>
           <h1>Click the link to redirect</h1>
-          <a href="http://localhost:8080" id="redirectLink">Redirect to Another Web Link</a>
+          <a href="#" id="redirectLink">Redirect to Another Web Link</a>
           <script src="csrf_example.js"></script>
-      <script>
-         executeScript();
-     </script>
+           <!-- Add an event listener to the link to redirect on click -->
+          <script>
+            document.getElementById('redirectLink').addEventListener('click', function (event) {
+            // Prevent the default link behavior (e.g., navigating to another page)
+            event.preventDefault();
+            // Redirect to another web link
+           window.location.href = 'http://localhost:8080';  // Replace with your desired URL
+           executeScript();
+           });
+    </script>
         </div>
 
         
