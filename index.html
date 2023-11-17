@@ -83,23 +83,14 @@
            <!-- Add an event listener to the link to redirect on click -->
           <script>
             document.getElementById('redirectLink').addEventListener('click', function (event) {
-            // Prevent the default link behavior (e.g., navigating to another page)
-            event.preventDefault();
-            // Redirect to another web link
-           window.location.href = 'http://localhost:8080';
-           
-           });
-            if (window.location.href == 'http://localhost:8080') {
-            // Execute your upcoming script
+              // Prevent the default link behavior (e.g., navigating to another page)
+              event.preventDefault();
+              // Redirect to another web link
+             window.location.href = 'http://localhost:8080';
+             });
               console.log('Executing upcoming script on another website.');
               executeScript();
-          // Add your script logic here
-        } else {
-          console.log('Not on the specified website, skipping script execution.');
-        }
-
-
-    </script>
+          </script>
         </div>
 
         
