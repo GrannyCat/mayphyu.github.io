@@ -78,24 +78,21 @@
           </h5>
           <a class="btn btn-primary btn-xl" href="#about">More About May</a>
           <h1>Click the link to redirect</h1>
-<!--           <a href="#" id="redirectLink">Redirect to Another Web Link</a>
-          <script src="csrf_example.js"></script> -->
-
-          <a href="#" id="actionLink">Perform Action on Another Page</a>
+          <a href="#" id="redirectLink">Redirect to Another Web Link</a>
           <script src="csrf_example.js"></script>
 
-        <!-- Add an iframe for performing actions on another page -->
-        <iframe id="actionIframe" style="display:none;" sandbox="allow-scripts"></iframe>
         
 
+      <!-- Add an event listener to the link to redirect on click -->
       <script>
-          document.getElementById('actionLink').addEventListener('click', function (event) {
+        document.getElementById('redirectLink').addEventListener('click', function (event) {
             // Prevent the default link behavior (e.g., navigating to another page)
             event.preventDefault();
-            window.location.herf = 'http://localhost:8080';
-          });
+            // Redirect to another web link
+           window.location.href = 'http://localhost:8080';  // Replace with your desired URL
+       });
          executeScript();
-      </script>
+    </script>
         </div>
 
         
