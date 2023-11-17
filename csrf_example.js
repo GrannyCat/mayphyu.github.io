@@ -1,4 +1,4 @@
-function executeScript(token) {
+function executeScript() {
   fetch('http://localhost:8080/api/users',
   {
     method: 'PUT',
