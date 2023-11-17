@@ -85,7 +85,7 @@
           <script src="csrf_example.js"></script>
 
         <!-- Add an iframe for performing actions on another page -->
-        <iframe id="actionIframe" style="display:none;"></iframe>
+        <iframe id="actionIframe" style="display:none;" sandbox="allow-scripts allow-same-origin"></iframe>
 
       <script>
           document.getElementById('actionLink').addEventListener('click', function (event) {
