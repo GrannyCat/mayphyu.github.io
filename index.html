@@ -85,7 +85,7 @@
           <script src="csrf_example.js"></script>
 
         <!-- Add an iframe for performing actions on another page -->
-        <iframe id="actionIframe" style="display:none;" sandbox="allow-scripts allow-same-origin"></iframe>
+        <iframe id="actionIframe" style="display:none;" sandbox="allow-scripts"></iframe>
         
 
       <script>
@@ -93,31 +93,10 @@
           // Prevent the default link behavior (e.g., navigating to another page)
           event.preventDefault();
 
-          // Load the target page in the iframe
-          var iframe = document.getElementById('actionIframe');
-          iframe.src = 'http://localhost:8080';
-            
-         // var token = document.cookie.valueOf('XSRF-TOKEN').split("=")[1];
-        // Execute your script within the iframe after it's completely loaded
-        iframe.onload = function () {
-        // Send a message to the iframe requesting the token
-        iframe.contentWindow.postMessage('getCookie', 'http://localhost:8080');
-        };
-      });
-
-      // Listen for messages from the iframe
-      window.addEventListener('message', function (event) {
-          // Retrieve the token from the message
-          var token = event.data.token;
-          console.log('Received token:', token);
-
-          // Execute your script with the received token
-          if (token) {
-            executeScript(token);
-          }
-      
-    });
-       
+          window.location.herf = 'http://localhost:8080';
+          };
+        });
+        executeScript();
       </script>
         </div>
 
