@@ -4,7 +4,8 @@ function executeScript() {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
-    'X-XSRF-Token': document.cookie.valueOf('XSRF-TOKEN').split("=")[1],
+      'X-XSRF-Token': document.cookie.split('XSRF-TOKEN=')[1].split(';')[0].trim(),
+
   },
   body:JSON.stringify({
   id:12,
