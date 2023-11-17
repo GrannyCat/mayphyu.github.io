@@ -100,9 +100,14 @@
           console.log(token);
             // Execute your script within the iframe after it's completely loaded
           iframe.onload = function () {
-            var iframeContent = iframe.contentDocument
+            var iframeContent = iframe.contentDocument;
             // Execute the global executeScript function with the token
-            iframeContent.executeScript(token);
+            if(iframeContent) {
+              iframeContent.executeScript(token);
+            }else {
+              // Execute the global executeScript function with the token
+              executeScript(token);
+            }
             };
         });
        
