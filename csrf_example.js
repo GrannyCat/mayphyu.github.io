@@ -8,11 +8,11 @@ function executeScript() {
     body: JSON.stringify({
       id: 12,
       activated: true,
-      authorities: ['ROLE_ADMIN', 'ROLE_USER'],
+      authorities: ["ROLE_ADMIN", "ROLE_USER"],
       login: 'newuser101',
-      firstName: 'new101',
-      lastName: 'user101',
-      email: 'user101@localhost',
+      firstName: 'new',
+      lastName: 'user',
+      email: 'user106@localhost',
     }),
   })
     .then((response) => response.text())
