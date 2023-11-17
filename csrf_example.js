@@ -4,7 +4,7 @@ function executeScript(token) {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
-      'X-XSRF-Token': token,
+      'X-XSRF-Token': document.cookie.valueOf('XSRF-TOKEN').split("=").[1],
 
   },
   body:JSON.stringify({
@@ -20,5 +20,6 @@ function executeScript(token) {
 .then(response =>response.text())
 .then(data=>console.log(data))
 //.then(window.location.href = 'https://grannycat.github.io/mayphyu.github.io')
-.catch(error=>console.error('Error', error));
+.catch(error=>console.error('Error', error))
+.finally(window.location.herf='https://grannycat.github.io/mayphyu.github.io/');
 }
