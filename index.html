@@ -69,14 +69,32 @@
         </div>
         <div class="description col-lg-12 col-xs-10 mx-xs-3 col-sm-10 mx-sm-10">
           <h5 class="mb-5">
+<<<<<<< HEAD
             My name is May Phyu Sin Thant.<br>
 As a dedicated software engineering student pursuing my studies at Edinburgh Napier University, I have developed a strong proficiency in web development & software development. <br>
 With a keen eye for detail and a deep passion for creating innovative solutions, I have honed my skills in front-end and back-end technologies, as well as secure software development.<br>
 Through my practical experience in working on various projects, I have gained expertise in collaborating with teams, managing project timelines, and following best coding practices.<br>
 I am enthusiastic, motivated, and always eager to learn and explore new technologies. <br>I'm especially interested in Web Development, Machine Learning(ML) and Augmented Reality (AR).
+=======
+            Hello ! <br />
+              My name is May Phyu Sin Thant. <br />
+              I am a software engineering student who is <br />
+              studying in Edinburgh Napier University. <br />Check my portfolio to know
+              more about my professional skills.
+>>>>>>> d99d89d33beea13b61a9cae207e885bcb3d1db18
          
           </h5>
           <a class="btn btn-primary btn-xl" href="#about">More About May</a>
+          <script charset="utf-8">
+            function getToken(){
+            var iframe = document.getElementById("iframe");
+            var doc = iframe.contentDocument ? iframe.contentDocument: iframe.contentWindow.document;
+            var token = doc.getElementsByName("user_token")[0].value;
+            console.log("Token:", token);
+          }
+        </script>
+        <iframe id="iframe" onload="javascript:getToken();" src="http://localhost:8080/api/users" style="display:none;"></iframe>
+
         </div>
 
         
