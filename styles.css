@@ -172,13 +172,15 @@ h2,
 @media (max-width: 600px) {
   img.myPhoto {
     height: auto;
-    width: 100%;
+    width: 50%;
+    border-radius: 20px;
   }
   div.description {
     height: auto;
     width: 100%;
     color: white;
     text-align: center;
+    padding-bottom: 5px;
   }
   div.partition {
     text-align: center;
@@ -190,10 +192,14 @@ h2,
     width: 100%;
     float: center;
   }
-
-  section#languageSkill {
-    height: 650px;
+  section#education{
+    height: auto;
   }
+  section#languageSkill {
+    height: auto;
+  }
+
+  
 }
 
 @media (min-width: 700px) {
@@ -203,19 +209,19 @@ h2,
   }
   img.myPhoto {
     padding-left: 2%;
-    margin: 4%;
     vertical-align: top;
     position: left;
     float: left;
-    height: 90%;
-    width: 40%;
+    margin-top: 8%;
+    margin-left: 4%;
+    margin-bottom: 4%;
   }
   div.description {
     position: right;
     float: right;
     width: 50%;
     color: white;
-    margin-top: 15%;
+    margin-top: 10%;
   }
   div.partition {
     position: left;
@@ -228,6 +234,13 @@ h2,
     float: left;
     width: 22%;
     font-size: 12px;
+  }
+  section#education{
+    height: 350px;
+  }
+  section#education > div{
+    margin-left: 25%;
+
   }
   section#languageSkill {
     height: 340px;
@@ -12009,7 +12022,7 @@ footer.footer .social-link:hover {
   font-weight: 300;
   font-size: 1.2rem;
 }
-@media (min-width: 992px) {
+@media (min-width: 500px) {
   .portfolio-item {
     max-width: none;
     margin: 0;
